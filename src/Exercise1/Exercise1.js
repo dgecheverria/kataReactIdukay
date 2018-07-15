@@ -5,8 +5,20 @@ export class Exercise1 extends Component {
     super(props);
     this.state = {};
   }
-  
-  render() {
+    calculo = (matriz) => {
+        let result = [];
+        result = matriz;
+        matriz.forEach((value, index) => {
+            value.forEach((res, i) => {
+                if (res !== 1) {
+                    result[index][i] = 'x';
+                }
+            });
+        });
+        return result;
+    }
+
+    render() {
     return (
       <div className="container">
         Exercise1 page
